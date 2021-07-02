@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 import Breakpoints from '../../Breakpoints';
 
-export const Container = styled.div`
-  border: 1px solid red;
-`;
+export const Container = styled.div``;
 
 export const Title = styled.div`
   color: ${({ theme }) => theme.darkMagenta};

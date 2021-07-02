@@ -3,7 +3,6 @@ import Breakpoints from '../../Breakpoints';
 
 export const Container = styled.div`
   display: flex;
-  border: 1px solid red;
 
   @media (max-width: ${Breakpoints.mobile}) {
     flex-direction: column;

@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import Breakpoints from '../../Breakpoints';
 
 export const Container = styled.div`
-  border: 1px solid red;
   @media (max-width: ${Breakpoints.mobile}) {
     margin-top: 2em;
   }
