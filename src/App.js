@@ -4,6 +4,8 @@ import TextHeader from './components/text-header';
 import Ratings from './components/ratings';
 import Cards from './components/cards';
 import Breakpoints from './Breakpoints';
+import TopBackgroundImage from './components/background/TopBackgroundImage';
+import BottomBackgroundImage from './components/background/BottomBackgroundImage';
 
 const Container = styled.div`
   min-height: 100vh;
@@ -42,6 +44,9 @@ export default function App() {
   return (
     <ThemeProvider theme={Colors}>
       <Container>
+        <TopBackgroundImage />
+        <BottomBackgroundImage />
+
         <TopContainer>
           <TextHeader />
           <Ratings />
