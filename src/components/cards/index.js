@@ -58,7 +58,7 @@ export default function Cards() {
 }
 
 Card.propTypes = {
-  img: PropTypes.array.isRequired,
+  img: PropTypes.any.isRequired,
   userName: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   content: PropTypes.string.isRequired,

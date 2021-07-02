@@ -1,4 +1,4 @@
-import { Container, RatingContainer, Img, GrayImg, RatingDesc, Offset } from './RatingElements';
+import { Container, RatingContainer, Img, GrayImg, RatingDesc, Offset, Stars } from './RatingElements';
 import PropTypes from 'prop-types';
 import IconStar from '../../images/icon-star.svg';
 
@@ -6,8 +6,8 @@ const MaxStarsNumber = 5;
 
 const makeStars = number => {
   const arr = [];
-  for (let i = 0; i < number; i++) arr.push(<Img src={IconStar} />);
-  for (let i = number; i < MaxStarsNumber; i++) arr.push(<GrayImg src={IconStar} />);
+  for (let i = 0; i < number; i++) arr.push(<Img key={i} src={IconStar} />);
+  for (let i = number; i < MaxStarsNumber; i++) arr.push(<GrayImg key={i} src={IconStar} />);
   return arr;
 };
 
@@ -16,7 +16,7 @@ const Rating = ({ stars, domain }) => {
 
   return (
     <RatingContainer>
-      {makeStars(stars)}
+      <Stars>{makeStars(stars)}</Stars>
       <RatingDesc>
         Rated {stars} stars in {domain}
       </RatingDesc>

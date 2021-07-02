@@ -1,11 +1,19 @@
 import styled from 'styled-components';
+import Breakpoints from '../../Breakpoints';
 
 export const Container = styled.div`
   display: flex;
+  border: 1px solid red;
+
+  @media (max-width: ${Breakpoints.mobile}) {
+    flex-direction: column;
+  }
 `;
 
 export const Offset = styled.div`
-  margin-top: ${({ index }) => `calc(${index} * 1em)`};
+  @media (min-width: ${Breakpoints.mobile}) {
+    margin-top: ${({ index }) => `calc(${index} * 1em)`};
+  }
 `;
 
 export const CardContainer = styled.div`
